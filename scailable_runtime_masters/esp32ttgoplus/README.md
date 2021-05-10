@@ -27,7 +27,7 @@ Install the `ttgocameraplus.bin` using:
 
 https://github.com/espressif/esptool
 
-On boot, the ESP32 will retrieve the emotion detection model available at https://cdn.sclbl.net:8000/file/a3dc49b2-b01b-11eb-af86-9600004e79cc.wasm, or fallback to a locally available version when it fails to connect.
+On boot, the ESP32 will use the emotion detection model available at https://cdn.sclbl.net:8000/file/a3dc49b2-b01b-11eb-af86-9600004e79cc.wasm.
 
 The ESP32 then retrieves a frame from the ESP32's camera, runs it through the Scailable model, and sends the prediction over I2C to the Arduino MKR WAN. It will then retrieve the next frame, and so on.
 
