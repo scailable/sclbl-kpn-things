@@ -2,6 +2,12 @@
 
 # Raspberry Pi Zero Scailable KPN Things Demo
 
+### Connect the Pi Zero to the MKR WAN 1310 over I2C
+
+![wiring](docs/img/wiring.png)
+
+![i2c_pin_in_out](docs/img/i2c_pin_in_out.jpg)
+
 ### Create an account at Scailable, transpile ONNX
 
 Check the Scailable tutorials: https://github.com/scailable/sclbl-tutorials.
