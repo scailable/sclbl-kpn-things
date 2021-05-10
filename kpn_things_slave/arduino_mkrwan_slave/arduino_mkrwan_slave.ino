@@ -1,8 +1,8 @@
 #include <MKRWAN.h>
 LoRaModem modem;
 
-#define APPEUI "0059AC0000010A74"
-#define APPKEY "ed6853f6b287c6de22480dfba9d61f71"
+#define APPEUI ""
+#define APPKEY ""
 #define DEBUG true
 
 // I2C
