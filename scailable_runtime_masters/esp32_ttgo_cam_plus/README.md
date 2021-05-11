@@ -23,7 +23,7 @@ SCL                     <--->   SCL
 
 ### Install ESP32 Scailable Runtime firmware
 
-Install the `ttgocameraplus.bin` using:
+Flash `ttgocameraplus.bin`, `bootloader.bin` and `partition-table.bin` to the ESP32 using:
 
 https://github.com/espressif/esptool
 
