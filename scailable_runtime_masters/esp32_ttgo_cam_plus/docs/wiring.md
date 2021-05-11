@@ -2,9 +2,12 @@
 
 # Wiring
 
-![](img/wiring.png)
+```
+ESP32 TTGO Camera Plus          Arduino MKR WAN 1310
 
+Ground                  <--->   Ground
+SDA                     <--->   SDA
+SDA                     <--->   SCL
 
-
-![](img/i2c_pin_in_out.jpg)
+```
 
