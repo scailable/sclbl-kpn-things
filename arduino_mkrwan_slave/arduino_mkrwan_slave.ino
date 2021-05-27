@@ -72,7 +72,7 @@ void receiveEvent(int howMany)
   Serial.println(x);             // print the character
   Serial.println(classes[x]);         
 
-  /*
+  
   Serial.println("Sending message...");
   const char str[] = classes[x];
   emotion.set(str);
@@ -83,7 +83,7 @@ void receiveEvent(int howMany)
   if (err > 0) {
     Serial.println("Message sent correctly!");
   } 
-  */
+  
   
 }
 void loop() {
