@@ -23,7 +23,6 @@ void setup() {
   Serial.begin(9600);
   while (!Serial);
   
-  /*
   //////////////////////////////////////
   // start lora modem
   if (!modem.begin(EU868)) {
@@ -49,7 +48,7 @@ void setup() {
   //////////////////////////////////////
   // add emotion record definition for KPN things
   device.add(emotion);
-  */
+  
 
   //////////////////////////////////////
   Serial.begin(9600);           // start serial for output
