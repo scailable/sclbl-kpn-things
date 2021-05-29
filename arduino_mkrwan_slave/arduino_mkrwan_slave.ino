@@ -5,12 +5,17 @@
  *
  */
 
-#include <MKRWAN.h>
-LoRaModem modem;
-
+// set EPPEUI and APPKEY here
 #define APPEUI ""
 #define APPKEY ""
+
+// To DEBUG or not to DEBUG
 #define DEBUG true
+
+// Provides APIs to communicate with LoRa and LoRaWAN networks
+// https://github.com/arduino-libraries/MKRWAN/blob/master/src/MKRWAN.h
+#include <MKRWAN.h>
+LoRaModem modem;
 
 // Needed for I2C communication between devices
 // [https://www.arduino.cc/en/reference/wire]
@@ -23,7 +28,8 @@ LoRaModem modem;
 SenMLPack device;
 SenMLStringRecord emotion("emotion", SENML_UNIT_NONE, NULL);
 
-// Emotions
+//////////////////////////////////////
+// Recognized emotions
 const char *classes[7] = {"angry", "disgust", "fear", "happy", "sad", "surprise", "neutral"};
 
 void setup() {
@@ -66,9 +72,14 @@ void setup() {
   device.add(emotion);
   
   //////////////////////////////////////
-  Serial.begin(9600);           // start serial for output
+  // start serial for output
+  Serial.begin(9600);        
+  
+  //////////////////////////////////////
   // set I2C
   Wire.begin(0x08); 
+  
+  //////////////////////////////////////
   // Attach a function to trigger when something is received.
   Wire.onReceive(receiveEvent);
 
