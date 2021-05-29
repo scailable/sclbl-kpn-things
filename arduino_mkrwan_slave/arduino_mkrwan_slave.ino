@@ -10,7 +10,7 @@
  *
  */
 
-// set EPPEUI and APPKEY here
+// set APPEUI and APPKEY here
 #define APPEUI ""
 #define APPKEY ""
 
