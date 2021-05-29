@@ -1,3 +1,10 @@
+/*                                                             
+ * (c) 2021 Scailable - https://scailable.net
+ *
+ * License: MIT License
+ *
+ */
+
 #include <MKRWAN.h>
 LoRaModem modem;
 
@@ -5,15 +12,18 @@ LoRaModem modem;
 #define APPKEY ""
 #define DEBUG true
 
-// I2C
+// Needed for I2C communication between devices
+// [https://www.arduino.cc/en/reference/wire]
 #include <Wire.h>
 
-// Thingsml
+// The main Thingsml library 
+// [https://github.com/kpn-iot/thingsml-c-library]
 #include <thingsml.h>
+
 SenMLPack device;
 SenMLStringRecord emotion("emotion", SENML_UNIT_NONE, NULL);
 
-// Classes
+// Emotions
 const char *classes[7] = {"angry", "disgust", "fear", "happy", "sad", "surprise", "neutral"};
 
 void setup() {
@@ -29,11 +39,15 @@ void setup() {
     Serial.println("Failed to start module");
     while (1) {}
   };
+  
+  //////////////////////////////////////
   // get lora modem info
   Serial.print("Your module version is: ");
   Serial.println(modem.version());
   Serial.print("Your device EUI is: ");
   Serial.println(modem.deviceEUI());
+  
+  //////////////////////////////////////
   // join over gateway
   modem.setPort(1);
   int connected = modem.joinOTAA(APPEUI, APPKEY);
@@ -41,6 +55,8 @@ void setup() {
     Serial.println("Something went wrong; are you indoor? Move near a window and retry");
     while (1) {}
   }
+  
+  //////////////////////////////////////
   // Set poll interval to 60 secs.
   modem.minPollInterval(60);
   Serial.println("Connected!");
@@ -49,7 +65,6 @@ void setup() {
   // add emotion record definition for KPN things
   device.add(emotion);
   
-
   //////////////////////////////////////
   Serial.begin(9600);           // start serial for output
   // set I2C
