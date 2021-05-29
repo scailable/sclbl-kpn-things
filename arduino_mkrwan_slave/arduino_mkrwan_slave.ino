@@ -1,5 +1,10 @@
-/*                                                             
- * (c) 2021 Scailable - https://scailable.net
+/*             
+ *
+ * (c) 2021 Scailable / KPN
+ *
+ * https://github.com/scailable/sclbl-kpn-things
+ * https://scailable.net
+ * https://www.kpn.com/zakelijk/internet-of-things/kpn-things.htm
  *
  * License: MIT License
  *
@@ -12,16 +17,16 @@
 // To DEBUG or not to DEBUG
 #define DEBUG true
 
-// Provides APIs to communicate with LoRa and LoRaWAN networks
-// https://github.com/arduino-libraries/MKRWAN/blob/master/src/MKRWAN.h
+// MKRWAN.h provides APIs to communicate with LoRa and LoRaWAN networks
+// [https://github.com/arduino-libraries/MKRWAN/blob/master/src/MKRWAN.h]
 #include <MKRWAN.h>
 LoRaModem modem;
 
-// Needed for I2C communication between devices
+// Wire.h is needed for I2C communication between devices
 // [https://www.arduino.cc/en/reference/wire]
 #include <Wire.h>
 
-// The main Thingsml library 
+// The KPN-IOT Thingsml library 
 // [https://github.com/kpn-iot/thingsml-c-library]
 #include <thingsml.h>
 
@@ -29,7 +34,7 @@ SenMLPack device;
 SenMLStringRecord emotion("emotion", SENML_UNIT_NONE, NULL);
 
 //////////////////////////////////////
-// Recognized emotions
+// Emotions recognized by Scailable.net optimized emotion model running on Raspberry Pi or ESP32
 const char *classes[7] = {"angry", "disgust", "fear", "happy", "sad", "surprise", "neutral"};
 
 void setup() {
@@ -82,7 +87,6 @@ void setup() {
   //////////////////////////////////////
   // Attach a function to trigger when something is received.
   Wire.onReceive(receiveEvent);
-
   Serial.print("running");
   
 }
@@ -109,9 +113,8 @@ void receiveEvent(int howMany)
   if (err > 0) {
     Serial.println("Message sent correctly!");
   } 
-  
-  
 }
+
 void loop() {
   delay(3000); 
 }
