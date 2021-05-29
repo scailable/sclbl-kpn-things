@@ -11,6 +11,8 @@
  */
 
 // set APPEUI and APPKEY here
+// see for instance https://docs.kpnthings.com/portal/getting-started/connect-a-device/marvin#register-your-marvin-to-kpn-things 
+// for a guideline on how to obtain them
 #define APPEUI ""
 #define APPKEY ""
 
