@@ -10,19 +10,28 @@
  *
  */
 
+// First run? The just obtain your device deviceEUI(). Otherwise, set to false.
+#define FIRSTUN true
+
+// To DEBUG or not to DEBUG
+#define DEBUG true
+
 // set APPEUI and APPKEY here
 // see for instance https://docs.kpnthings.com/portal/getting-started/connect-a-device/marvin#register-your-marvin-to-kpn-things 
 // for a guideline on how to obtain them
 #define APPEUI ""
 #define APPKEY ""
 
-// To DEBUG or not to DEBUG
-#define DEBUG true
 
 // MKRWAN.h provides APIs to communicate with LoRa and LoRaWAN networks
 // [https://github.com/arduino-libraries/MKRWAN/blob/master/src/MKRWAN.h]
 #include <MKRWAN.h>
 LoRaModem modem;
+
+if (FIRSTUN) {
+  Serial.print("Your device EUI is: ");
+  Serial.println(modem.deviceEUI());
+}
 
 // Wire.h is needed for I2C communication between devices
 // [https://www.arduino.cc/en/reference/wire]
