@@ -18,9 +18,6 @@
  *
  */
 
-// First run? The just obtain your device deviceEUI(). Otherwise, set to false.
-#define FIRSTUN true
-
 // To DEBUG or not to DEBUG
 #define DEBUG true
 
@@ -35,10 +32,9 @@
 #include <MKRWAN.h>
 LoRaModem modem;
 
-if (FIRSTUN) {
-  Serial.print("Your device EUI is: ");
-  Serial.println(modem.deviceEUI());
-}
+// On first run:
+Serial.print("Your device EUI is: ");
+Serial.println(modem.deviceEUI());
 
 // Wire.h is needed for I2C communication between devices
 // [https://www.arduino.cc/en/reference/wire]
