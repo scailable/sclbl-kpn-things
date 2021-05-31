@@ -1,4 +1,4 @@
-# Scailable & KPN Things
+# Scailable // KPN Things
 
 Run your AI or ML model on the edge with Scailable, send its predictions over the KPN things network.
 
