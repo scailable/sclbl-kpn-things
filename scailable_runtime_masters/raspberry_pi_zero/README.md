@@ -12,7 +12,7 @@
 
 Check the Scailable tutorials: https://github.com/scailable/sclbl-tutorials.
 
-Upload `emotion.onnx` to your Scailable dashboard.
+Upload the `emotion.onnx` model to your Scailable dashboard.
 
 ### Install Raspberry Pi Zero Scailable Runtime and Client
 
@@ -28,7 +28,7 @@ Set your Scailable user id in `config.ini` .
 
 Run `socket-sclbld`. It will exit, with the message that your device is now registered, and can assign a model.
 
-Assign the emotion model to your device in the Scailable dashboard.
+Assign the emotion model (transpiled from the uploaded `emotion.onnx`) to your device in the Scailable dashboard.
 
 Run `socket-sclbld`. This Scailable runtime daemon now serves assigned model(s).
 
