@@ -1,6 +1,12 @@
 # sclbl-kpn-things
 Run your AI or ML model on the edge with Scailable, send its predictions over the KPN things network.
 
+Install KPNthings on an Arduino MKR WAN 1300:
+
+[KPNThings Arduino source code](https://github.com/scailable/sclbl-kpn-things/tree/main/arduino_mkrwan_slave)
+
+Then choose flash either the ESP32 or Raspberry Pi Zero runtime binaries and flash it to the device:
+
 [ESP32 TTGO T-Camera Plus Demo](https://github.com/scailable/sclbl-kpn-things/tree/main/scailable_runtime_masters/esp32_ttgo_cam_plus)
 
 [Raspberry Pi Zero Demo](https://github.com/scailable/sclbl-kpn-things/tree/main/scailable_runtime_masters/raspberry_pi_zero)
