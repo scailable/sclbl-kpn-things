@@ -8,6 +8,14 @@
  *
  * License: MIT License
  *
+ * In order to retrieve your DeviceUID, do the following in your Arduino IDE:
+ *
+ * - from Library manager (Tools->Manage Libraries...), search for 'ThingsML' and install
+ * - flash program with #define FIRSTUN true to get deveui
+ * - register in kpn things, gets appeui and appkey
+ * - fill out appeui and appkey in the source code
+ * - flash final program with #define FIRSTUN false
+ *
  */
 
 // First run? The just obtain your device deviceEUI(). Otherwise, set to false.
@@ -21,7 +29,6 @@
 // for a guideline on how to obtain them
 #define APPEUI ""
 #define APPKEY ""
-
 
 // MKRWAN.h provides APIs to communicate with LoRa and LoRaWAN networks
 // [https://github.com/arduino-libraries/MKRWAN/blob/master/src/MKRWAN.h]
