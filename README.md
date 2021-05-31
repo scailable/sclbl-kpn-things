@@ -1,4 +1,5 @@
-# sclbl-kpn-things
+# Scailable & KPN Things
+
 Run your AI or ML model on the edge with Scailable, send its predictions over the KPN things network.
 
 Install KPNthings on an Arduino MKR WAN 1300:
