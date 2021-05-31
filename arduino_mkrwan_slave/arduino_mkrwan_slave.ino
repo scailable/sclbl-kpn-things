@@ -8,9 +8,10 @@
  *
  * License: MIT License
  *
- * In order to retrieve your DeviceUID, do the following in your Arduino IDE:
+ * In order to retrieve your MKR WAN's DeviceUID, do the following in your Arduino IDE:
  *
  * - from Library manager (Tools->Manage Libraries...), search for 'ThingsML' and install
+ * - do the same for the 'MKRWAN' library
  * - flash program and run one time to get deveui
  * - register in kpn things, gets appeui and appkey
  * - fill out appeui and appkey in the source code
@@ -106,7 +107,6 @@ void setup() {
   
 }
 
-//////////////////////////////////////
 // triggered when message received over I2C
 void receiveEvent(int howMany)
 {
@@ -133,7 +133,6 @@ void receiveEvent(int howMany)
  
   
 }
-
 void loop() {
   delay(3000); 
 }
