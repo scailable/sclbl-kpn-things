@@ -40,7 +40,7 @@ Install the Arduino IDE. Setup according to:
 
 https://kpn-iot.github.io/thingsml-c-library/?c--arduino#installation
 
-Compile and flash `arduino_mkrwan_slave.ino` from [here](https://github.com/scailable/sclbl-kpn-things/tree/main/arduino_mkrwan_slave).
+Compile and flash `arduino_mkrwan_slave.ino` that is available in the current repository [here](https://github.com/scailable/sclbl-kpn-things/tree/main/arduino_mkrwan_slave).
 
-The Arduino MKR WAN will now receive predictions over I2C, and send them over Lora to KPN Things.
+The Arduino MKR WAN will now receive predictions over I2C, and send them over Lora to KPN Things!
 
